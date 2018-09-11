@@ -122,6 +122,10 @@ add_action( 'widgets_init', 'hoangvvo_widgets_init' );
 function hoangvvo_scripts() {
 	wp_enqueue_style( 'hoangvvo-style', get_stylesheet_uri() );
 
+	wp_enqueue_style ('bootstrapgrid-style', get_template_directory_uri().'/css/bootstrap-grid.min.css');
+
+	wp_enqueue_style ('normalize-style', get_template_directory_uri().'/css/normalize.min.css');
+
 	wp_enqueue_script( 'hoangvvo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'hoangvvo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
