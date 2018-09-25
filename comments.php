@@ -21,12 +21,12 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
+	<div class="container">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h4 class="comments-title">
 			<?php
 			$hoangvvo_comment_count = get_comments_number();
 			if ( '1' === $hoangvvo_comment_count ) {
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 				);
 			}
 			?>
-		</h2><!-- .comments-title -->
+		</h4><!-- .comments-title -->
 
 		<?php the_comments_navigation(); ?>
 
@@ -71,5 +71,5 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
+	</div>
 </div><!-- #comments -->
