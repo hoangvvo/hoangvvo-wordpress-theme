@@ -18,7 +18,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="home">
-				<section class="home-index home-header">
+				<section class="home-section home-header">
 					<div class="container">
 						<div class="row">
 							<div class="home-header-content col-sm-8 mx-auto mt-5">		

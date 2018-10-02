@@ -10,28 +10,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<div class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				hoangvvo_posted_on();
-				hoangvvo_posted_by();
-				?>
+			Posted on <?php the_time('l, F jS, Y') ?>.
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php hoangvvo_post_thumbnail(); ?>
+	</div><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="container">
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -42,8 +33,7 @@
 						'class' => array(),
 					),
 				)
-			),
-			get_the_title()
+			)
 		) );
 
 		wp_link_pages( array(
@@ -51,9 +41,12 @@
 			'after'  => '</div>',
 		) );
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<div class="entry-footer">
+		<div class="container">
 		<?php hoangvvo_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		</div>
+	</div><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
