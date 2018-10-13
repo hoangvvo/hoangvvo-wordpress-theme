@@ -35,3 +35,8 @@ get_header();
 <?php
 /*get_sidebar();*/
 get_footer();
+/* View count */
+if ( ! is_preview() ) {
+    setPostViews(get_the_ID());
+}
+
