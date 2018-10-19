@@ -188,3 +188,12 @@ function setPostViews($postID) {
 }
 // Remove issues with prefetching adding extra views
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+//Remove Query String from Static Resources
+function remove_css_js_ver( $src ) {
+if( strpos( $src, '?ver=' ) )
+$src = remove_query_arg( 'ver', $src );
+return $src;
+}
+add_filter( 'style_loader_src', 'remove_css_js_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_css_js_ver', 10, 2 ); 
