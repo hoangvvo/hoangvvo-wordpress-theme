@@ -21,8 +21,18 @@ get_header();
 				<section class="home-section home-header">
 					<div class="container">
 						<div class="row">
-							<div class="home-header-content col-sm-8 mx-auto mt-5">		
-								<h1>I am a <span>software developer</span>, a <span>leader</span>, a <span>social marketer</span>, an <span>enthusiastic photographer</span>, and a <span>good friend</span>.</h1>
+							<div class="col-sm-8 mx-auto mt-1 text-center home-header-content">		
+								<h2>Meet Hoang Vo,</h2>
+								<div class="profilepic-wrapper">
+									<div class="profilepic">
+										<img/>
+									</div>
+								</div>
+								<h1>He is a <span>software developer</span>, a <span>leader</span>, a <span>social marketer</span>, an <span>enthusiastic photographer</span>, and a <span>good friend</span>.</h1>
+								<div class="text-align">
+									<a class="btn">My CV</a>
+									<a class="btn">My Blog</a>
+								</div>
 							</div>
 						</div>
 					</div>

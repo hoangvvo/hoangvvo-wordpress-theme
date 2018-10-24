@@ -16,8 +16,8 @@
 		<div class="entry-meta">
 			<p class="entry-category"><?php the_category(' ');?></p>
 			<?php 
-				the_title( sprintf( '<h2 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' );
-				the_content();
+				the_title( sprintf( '<h3 class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></h3>' );
+				the_excerpt();
 			?>
 			
 		</div>
