@@ -15,31 +15,35 @@ hoangvvo is based on Underscores https://underscores.me/, (C) 2012-2017 Automatt
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif');
 
 /* Site css */
 
-:root {
-	--purple: #5C6AFF;
-	--grey: #4e4f61;
-}
-
 body {
 	background: #f6f7f8;
-	color: #2e3e48;
+	color: #444;
 	font-family: 'Open Sans', sans-serif;
-}
-p {
-	line-height: 2rem;
 }
 a {
 	text-decoration: none;
 	color: #007fac;
 }
+textarea, input {
+	background: #eee;
+	resize: none;
+	color: #44;
+	padding: 20px;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+    border: 2px solid transparent;
+    font-weight: 700;
+    border-radius: 10px;
+}
 /* Header */
 .site-header {
-	position: fixed;
+	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
 	z-index: 1000;
 }
@@ -63,7 +67,7 @@ a {
 }
 .site-header .site-navigation a {
 	position: relative;
-	color: #fff;
+	color: #eee;
     font-size: 17px;
     line-height: 17px;
 	font-weight: 300;
@@ -76,33 +80,37 @@ a {
 /* Footer */
 .site-footer {
 	padding: 2rem;
-	background: #03030c;
+	background: #1e1e1e;
 }
 .site-footer .site-info {
 	text-align: center;
-	color: var(--grey);
+	color: #989898;
 	font-weight: 150;
 	font-size: 1rem;
 }
 .site-footer .site-info a {
 	text-decoration: none;
-	color: var(--grey);
+	color: #989898;
 }
 
 /* Homepage */
 .home .home-section {
 	height: 100vh;
 	width: 100vw;
-	padding: 5rem 0 5rem 0;
+	padding: 2rem 0 2rem 0;
 	position: relative;
-	background: linear-gradient(90deg, #2e2e2e, #161f42), linear-gradient(180deg, #2e2e2e, #2e2e2e);
-	color: #fff;
 }
 .home .home-section.content-height {
 	height: unset;
 }
+.home .home-header {
+	/*background: linear-gradient(to right top, #845EC2, #D65DB1,  #FF6F91, #FF9671, #FFC75F, #F9F871);*/
+	background-color: #222;
+	color: #eee;
+	padding-top: 5rem;
+}
 .home .home-header .home-header-content {
-	border-left: solid 2px var(--purple);
+	border-left: solid 2px #845EC2;
 }
 .home .home-header .home-header-content h1 {
 	margin: 0;
@@ -112,6 +120,11 @@ a {
 }
 .home .home-header .home-header-content h1 span {
 	font-weight: 700;
+}
+
+.home .home-project {
+	background-color: #f6f6f6;
+	color: #444;
 }
 
 /* Content page */
@@ -139,7 +152,7 @@ a {
 .page-section h2 {
 	font-size: 1.5rem;
 	margin: 0;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'PT Serif', serif;
 }
 .page-section h1 {
 	font-size: 3rem;
@@ -150,20 +163,25 @@ a {
 	padding: 5rem 0 5rem 0;
 	text-align: center;
 	position: relative;
-	background: linear-gradient(90deg, #2e2e2e, #161f42), linear-gradient(180deg, #2e2e2e, #2e2e2e); color: rgba(244, 246, 255, .8);
+	background: #845EC2;
+	color: #eee;
+}
+.type-post .entry-header .entry-category a {
+	color: #eee!important;
+}
+.type-post .entry-header h1 {
+	margin-top: 0.75rem;
 }
 .type-post .entry-content {
 	padding: 1rem 0 1rem 0;
-	background: #f6f7f8;
-	color: #2e3e48;
+	line-height: 2rem;
+}
+.type-post .entry-content > .container {
+	max-width: 765px;
 }
 .type-post .entry-content a:hover,.entry-content a:active {
 	color: #007fac;
 	background-color: #bfe6ff;
-}
-.type-post .entry-footer {
-	background: #f6f7f8;
-	color: #2e3e48;
 }
 
 
@@ -175,69 +193,49 @@ a {
 	padding: 5rem 0 5rem 0;
 	text-align: center;
 	position: relative;
-	background: linear-gradient(90deg, #2e2e2e, #161f42), linear-gradient(180deg, #2e2e2e, #2e2e2e); color: rgba(244, 246, 255, .8);
+	background: #FF6F91;
+	color: #eee;
 }
 .type-index {
 	position: relative;
-	border-radius: 6px;
 	overflow: hidden;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
-	background: #32333b;
 }
 .type-index .entry-image {
 	position: relative;
-    height: 0;
-    padding-top: 56.25%;
+    padding-top: 100%;
     overflow: hidden;
+    border-radius: 8px;
 }
 .type-index .entry-image img {
 	width: 100%;
-	height: auto;
+    border-radius: 9px;
+    object-fit: cover;
+	height: 100%;
 	position: absolute;
-    top: 0;
-    left: 0;
+	top: 0;
+	left: 0;
 }
 .type-index .entry-meta {
 	position: relative;
 	padding: 0.5rem 1rem;
-	white-space: nowrap;
-	line-height: 1.5rem;
 }
 .type-index .entry-meta .entry-title {
-	margin: 0;
-	font-size: 1rem;
-	overflow: hidden;
-    text-overflow: ellipsis;
+	line-height: 2rem;
+	margin: .5rem 0 .5rem 0;
 }
 .type-index .entry-meta .entry-title a {
-	color: #fff!important;
+	color: #444!important;
 }
 .type-index .entry-meta .entry-category {
-	margin: 0;
-	font-size: 0.95rem;
-	padding-bottom: 0.5rem;
-	font-weight: 400;
+	margin: .5rem 0 .5rem 0;
+	font-size: 1.25rem;;
 }
 .type-index .entry-meta .entry-category a {
-	color: #a6a9b0!important;
+	color: #444!important;
 }
-.type-index .entry-meta .entry-stat {
-	padding-top: 0.5rem;
-	border-top: 1px solid #40434d;
-	color: #a6a9b0;
-}
-.type-index .entry-meta .entry-stat svg {
-	fill: #a6a9b0;
-	height: .75rem;
-	width: auto;
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    vertical-align: middle;
-    margin-right: 3px;
-}
-.type-index .entry-meta .entry-stat span {
-	padding: 0 0.625rem 0 0;
+.type-index .entry-meta h3 {
+	line-height: 2rem;
+	font-weight: 400;
 }
 /* Comment section */
 .comments-area {
@@ -250,20 +248,11 @@ a {
 	display: none;
 }
 .comment-form-comment #comment {
-	background: #eee;
-	resize: none;
-	color: #353a44;
 	width: 100%;
-	padding: 20px;
-    font-size: 1rem;
-    transition: all .2s ease-in-out;
-    border: 2px solid transparent;
-    font-weight: 700;
-    border-radius: 10px;
 }
 .form-submit #submit {
 	width: 100%;
-	color: #fff;
+	color: #eee;
 	background-color: #007fac;
 	padding: 10px 16px;
 	border-radius: 4px;

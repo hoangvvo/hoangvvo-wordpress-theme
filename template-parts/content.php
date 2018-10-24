@@ -11,12 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-header">
+	<p class="entry-category"><?php the_category(' ');?></p>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-			Posted on <?php the_time('l, F jS, Y') ?>.
+			Posted on <?php the_time('l, F jS, Y') ?> by <?php the_author(); ?>.
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</div><!-- .entry-header -->

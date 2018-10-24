@@ -27,24 +27,34 @@ get_header();
 						</div>
 					</div>
 				</section>
-				<?php
-				/*
-					if ( is_home() && ! is_front_page() ) :
-						?>
-						<header>
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</header>
-						<?php
-					endif;
-					/* Start the Loop
-					while ( have_posts() ) :
-						the_post();
-						get_template_part( 'template-parts/content', get_post_type() );
-					endwhile;
-					the_posts_navigation();
-					*/
-				?>
-				
+				<section class="home-section home-project content-height">
+					<div class="container">
+						<div class="row">
+							<div class="">		
+								<h2>Projects</h2> 
+								<h3>I have created some great projects over the past years.</h3>
+							</div>
+						</div>
+						<div class="row">
+							<?php
+							$args = array(
+								'post_type' => 'post',
+								'post_status' => 'publish',
+								'category_name' => 'project',
+								'posts_per_page' => 4,
+							);
+							$project_query = new WP_Query($args);
+							if ( $project_query->have_posts() ) :
+								while ( $project_query->have_posts() ) : 
+								$project_query->the_post();
+								get_template_part( 'template-parts/content', 'index' );
+								endwhile;
+							endif;
+							wp_reset_postdata();
+							?>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
