@@ -10,7 +10,7 @@
 ?>
 
 <section class="no-results not-found">
-	<div class="page-header" style="height: 100vh;">
+	<div class="page-header" style="height: 100vh; background: #111;">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'hoangvvo' ); ?></h1>
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
