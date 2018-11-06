@@ -16,9 +16,9 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<div class="page-header">
+				<h1 class="page-title"><?php single_term_title(); ?></h1>
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<h2 class="archive-description">', '</h2>' );
+				the_archive_description( '<p class="archive-description">', '</p>' );
 				?>
 			</div><!-- .page-header -->
 
