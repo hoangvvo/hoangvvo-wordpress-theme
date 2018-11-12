@@ -13,19 +13,16 @@
 
 	</div><!-- #content -->
 
-	<footer class="site-footer mx-auto text-center">
+	<footer class="site-footer">
 		<div class="site-info container">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hoangvvo' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'hoangvvo' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Designed with ❤ by %2$s.', 'hoangvvo' ), 'hoangvvo', '<a href="https://www.hoangvvo.com">Hoang Vo</a>' );
-				?>
+			<div class="row">
+				<div class="col-12 text-center">
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Designed with ❤ by %2$s.', 'hoangvvo' ), 'hoangvvo', '<a href="https://www.hoangvvo.com">Hoang Vo</a>' );
+					?>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
