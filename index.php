@@ -31,37 +31,9 @@ get_header();
 								<h1>He is a <span>software developer</span>, a <span>leader</span>, a <span>social marketer</span>, an <span>enthusiastic photographer</span>, and a <span>good friend</span>.</h1>
 								<div class="text-align">
 									<a class="btn">My CV</a>
-									<a class="btn">My Blog</a>
+									<a href="/blog" class="btn">My Blog</a>
 								</div>
 							</div>
-						</div>
-					</div>
-				</section>
-				<section class="home-section home-project content-height">
-					<div class="container">
-						<div class="row">
-							<div class="">		
-								<h2>Projects</h2> 
-								<h3>I have created some great projects over the past years.</h3>
-							</div>
-						</div>
-						<div class="row">
-							<?php
-							$args = array(
-								'post_type' => 'post',
-								'post_status' => 'publish',
-								'category_name' => 'project',
-								'posts_per_page' => 4,
-							);
-							$project_query = new WP_Query($args);
-							if ( $project_query->have_posts() ) :
-								while ( $project_query->have_posts() ) : 
-								$project_query->the_post();
-								get_template_part( 'template-parts/content', 'index' );
-								endwhile;
-							endif;
-							wp_reset_postdata();
-							?>
 						</div>
 					</div>
 				</section>
