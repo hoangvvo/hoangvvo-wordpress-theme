@@ -14,6 +14,7 @@ function hoangvvo_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'image-home-header' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -25,6 +26,23 @@ function hoangvvo_customize_register( $wp_customize ) {
 			'render_callback' => 'hoangvvo_customize_partial_blogdescription',
 		) );
 	}
+	$wp_customize->add_section( 'hoangvvo_homepage_section' , array(
+		'title'      => __( 'Hoang Vo Settings', 'hoangvvo' ),
+		'priority'   => 30,
+		'capability'  => 'edit_theme_options'
+	));
+	$wp_customize->add_setting('image-home-header-img', array(
+		'default'           => '',
+		'transport' => 'refresh', 
+        'capability'        => 'edit_theme_options',
+        'type'           => 'theme_mod'
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'image-home-header-img', array(
+        'label'    => __('My profile picture', 'hoangvvo'),
+        'section'  => 'hoangvvo_homepage_section',
+        'settings' => 'image-home-header-img'
+    )));
+	
 }
 add_action( 'customize_register', 'hoangvvo_customize_register' );
 
