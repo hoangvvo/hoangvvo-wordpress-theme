@@ -22,29 +22,32 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-transparent p-5">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img height="30" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]; ?>" />
-			</a><!-- .site-branding -->
-			<div class="collapse navbar-collapse" id="navbarHeader">
-				<ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-				<?php
-				$menuParameters = array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'container'      => false,
-					'echo'           => false,
-					'items_wrap'     => '%3$s',
-					'depth'			 => 0
-				);
-				echo strip_tags(wp_nav_menu( $menuParameters ), '<li><a>' );
-				?>
-				</ul>
-			</div><!-- #site-navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-5">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img height="32" alt="<?php bloginfo( 'name' ); ?>" src="<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0]; ?>" />
+				</a><!-- .site-branding -->
+				<div class="collapse navbar-collapse" id="navbarHeader">
+					<ul class="navbar-nav ml-md-auto ">
+					<?php
+					$menuParameters = array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'container'      => false,
+						'echo'           => false,
+						'items_wrap'     => '%3$s',
+						'depth'			 => 0
+					);
+					echo strip_tags(wp_nav_menu( $menuParameters ), '<li><a>' );
+					?>
+					</ul>
+				</div><!-- #site-navigation -->
+			</div>	
 		</nav>
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
