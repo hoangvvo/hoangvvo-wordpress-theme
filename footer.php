@@ -15,14 +15,20 @@
 
 	<footer class="site-footer">
 		<div class="site-info container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Designed with ❤ by %2$s.', 'hoangvvo' ), 'hoangvvo', '<a href="https://www.hoangvvo.com">Hoang Vo</a>' );
-					?>
+			<div class="row d-none">
+				<div class="col-4">
+					<h2>Hoang V Vo</h2>
+					<div class="footer-social-link">
+						<a href="<?php echo get_theme_mod( 'linkedin-link' ); ?>" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+						<a href="<?php echo get_theme_mod( 'instagram-link' ); ?>" class="nav-link"><i class="fab fa-instagram"></i></a>
+					</div>
 				</div>
 			</div>
+			<p class="copyright-text"><?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s. ', 'hoangvvo' ), 'Wordpress' );
+				?>
+			<?php printf( esc_html__( 'Designed and coded with ❤ by %2$s.', 'hoangvvo' ), 'hoangvvo', '<a href="https://www.hoangvvo.com">Hoang Vo</a>' ); ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
@@ -35,7 +41,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXX-Y', 'auto');
+ga('create', 'UA-131460776-1', 'auto');
 ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
