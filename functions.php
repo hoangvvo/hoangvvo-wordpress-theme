@@ -134,8 +134,7 @@ function hoangvvo_scripts() {
 	wp_enqueue_script( 'hoangvvo-jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '3.3.1', true);
 	wp_enqueue_script( 'hoangvvo-smoothscroll', get_template_directory_uri() . '/js/smooth-scroll.js', array(), '', true);
 	wp_enqueue_script( 'hoangvvo-bootstrapJs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.2.1', true);
-	//wp_enqueue_script( 'hoangvvo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	//wp_enqueue_script( 'hoangvvo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'hoangvvo-animateView', get_template_directory_uri() . '/js/animateView.js', array(), '4.2.1', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,12 +158,22 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+/* create Post type */
+function create_post_type() {
+	register_post_type( 'hoangvvo_honor',
+		array(
+		'labels' => array(
+			'name' => __( 'Honors & Awards' ),
+			'singular_name' => __( 'Honor' )
+		),
+		'public' => true,
+		'has_archive' => false
+		)
+	);
+	add_post_type_support( 'hoangvvo_honor', 'thumbnail' );
+
 }
+add_action( 'init', 'create_post_type' );
 
 /* View count */
 function getPostViews($postID){
