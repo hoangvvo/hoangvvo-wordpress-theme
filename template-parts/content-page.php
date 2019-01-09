@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="entry-header mb-5">
-		<div class="entry-head container">
+		<div class="entry-head">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<?php
 			if ( 'post' === get_post_type() ) :
