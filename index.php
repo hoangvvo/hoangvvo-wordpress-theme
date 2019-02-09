@@ -25,10 +25,6 @@ get_header();
 							<div class="col-sm-8 mx-auto mt-1 text-center home-header-content">		
 								<h2 class="">Meet Hoang Vo,</h2>
 								<h1 class="">He is a <span>software developer</span>, a <span>leader</span>, a <span>social marketer</span>, an <span>enthusiastic photographer</span>, and a <span>good friend</span>.</h1>
-								<div class="text-align mt-5">
-									<a href="/about" class="btn">About me</a>
-									<a href="/blog" class="btn">My Blog</a>
-								</div>
 							</div>
 						</div>
 					</div>
