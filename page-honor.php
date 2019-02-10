@@ -28,13 +28,17 @@ get_header();
                     }
                     ?>
                 </div><!-- .entry-header -->
+                <div class="container">
+                    <p class="animateView">Those who know me know that I am such a competitive person. I love to compete and achieve great awards. In fact, I have been doing it for years!</p>
+                    <p class="animateView">For more detail, check out my <a href="https://www.linkedin.com/in/hoangvvo/">LinkedIn</a> page.</p>
+                </div>
                 <div class="container-fluid">
-                    <div class="row no-gutters">
+                    <div class="row">
                     <?php
                         $args = array( 'post_type' => 'hoangvvo_honor', 'posts_per_page' => 100 );
                         $loop = new WP_Query( $args );
                         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 square-item">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 square-item animateView">
                             <div class="square-item-wrapper">
                                 <?php
                                 if ( has_post_thumbnail() ) {
@@ -48,9 +52,7 @@ get_header();
                                     <p><?php the_content();?></p>
                                 </div>
                             </div>
-
-                            
-
+                        </div>                          
                         <?php endwhile; ?>
                     </div>
                 </div>
