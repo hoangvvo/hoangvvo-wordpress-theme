@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
-		<nav class="navbar navbar-expand-lg navbar-dark pt-5">
+		<nav class="navbar navbar-expand-lg navbar-dark pt-4">
 			<div class="container">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false">
 					<span class="navbar-toggler-icon"></span>
