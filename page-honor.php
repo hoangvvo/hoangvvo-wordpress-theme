@@ -18,7 +18,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="entry-header mb-5">
+            <div class="entry-header">
                     <div class="entry-head">
                         <h1 class="entry-title">Honors & Awards</h1>
                     </div>
