@@ -9,7 +9,7 @@
 
 ?>
 <div class="col-12 col-md-6 col-lg-4">
-	<article id="post-<?php the_ID(); ?>" class="type-index">
+	<article id="post-<?php the_ID(); ?>" class="type-index animateView">
 		<div class="entry-image">
 			<?php the_post_thumbnail( 'medium' ); ?>
 		</div>
