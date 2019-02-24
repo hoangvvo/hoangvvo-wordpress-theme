@@ -15,14 +15,14 @@ hoangvvo is based on Underscores https://underscores.me/, (C) 2012-2017 Automatt
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 /* Site css */
 body {
 	scroll-behavior: smooth;
 	background: #f6f7f8;
 	color: #444;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -65,7 +65,6 @@ transform: translate(0, 0);
     left: 0;
     z-index: 99;
 	width: 100%;
-	font-family: 'Raleway', sans-serif;
 }
 @media (max-width: 767px){
 	.site-header .navbar {
@@ -270,7 +269,6 @@ transform: translate(0, 0);
 	text-transform: uppercase;
 }
 .page-header .archive-descriptions {
-	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 }
 .type-index {
@@ -311,7 +309,6 @@ transform: translate(0, 0);
 	color: #d4d4dc!important;
 }
 .type-index .entry-meta .entry-category {
-	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 2.2px;
@@ -362,7 +359,6 @@ transform: translate(0, 0);
 	position: absolute;
 	right:0;
 	top: 0;
-	font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
 }
