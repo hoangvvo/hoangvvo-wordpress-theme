@@ -20,7 +20,7 @@
 		</div>
 		<?php 
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail('full',array('class' => 'entry-featureImage '));
+			//the_post_thumbnail('full',array('class' => 'entry-featureImage '));
 		}
 		?>
 	</div><!-- .entry-header -->
