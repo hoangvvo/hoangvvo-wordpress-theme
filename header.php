@@ -24,7 +24,7 @@
 	<header id="masthead" class="site-header">
 		<nav class="navbar navbar-expand-lg navbar-dark pt-4">
 			<div class="container">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Expanded">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
