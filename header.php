@@ -35,9 +35,6 @@
 					<li class="nav-item">
 						<a href="<?php echo get_theme_mod( 'linkedin-link' ); ?>" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
 					</li>
-					<li class="nav-item">
-						<a href="<?php echo get_theme_mod( 'instagram-link' ); ?>" class="nav-link"><i class="fab fa-instagram"></i></a>
-					</li>
 				</ul>
 				<div class="collapse navbar-collapse" id="navbarHeader">
 					<ul class="navbar-nav ml-md-auto ">
