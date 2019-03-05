@@ -83,13 +83,6 @@ if ( ! function_exists( 'hoangvvo_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'hoangvvo_setup' );
 
-function my_login_page() { ?>
-	<style type="text/css">
-	#login,#login:before{background:inherit!important}#login,form{position:absolute!important;left:50%!important;top:50%!important}body{height:100vh!important;background:url(https://9to5mac.com/wp-content/uploads/sites/6/2018/07/Desert-6.jpg?quality=82&strip=all) no-repeat fixed!important;background-size:cover!important}h1{z-index:100!important;position:absolute!important;left:50%!important;transform:translate(-50%,50%)!important}h1 a{background-image:url(https://www.hoangvvo.com/wp-content/uploads/2018/12/logo.png)!important;pointer-events:none}#login{padding:0!important;width:350px!important;height:500px!important;overflow:hidden!important;margin-left:-175px!important;margin-top:-250px!important;border-radius:8px!important}#login:before{width:400px!important;height:550px!important;content:""!important;position:absolute!important;top:-25px!important;left:-25px!important;bottom:0!important;right:0!important;box-shadow:inset 0 0 0 200px rgba(255,255,255,.2)!important;filter:blur(10px)!important}form{background:0 0!important;box-shadow:none!important;text-align:center!important;transform:translate(-50%,-50%)!important}label,span a{color:rgba(255,255,255,.8)!important}input[type=checkbox]{box-shadow:none!important;background:0!important;outline:0!important;border:0!important;color:rgba(255,255,255,.8)!important}input[type=password],input[type=text]{box-shadow:none!important;background:0!important;width:200px!important;outline:0!important;border:0!important;border-bottom:2px solid rgba(255,255,255,.3)!important;margin:20px 0!important;padding-bottom:10px!important;font-size:18px!important;font-weight:700!important;color:rgba(255,255,255,.8)!important}input[type=submit]{width:200px!important;border:0!important;border-radius:8px!important;padding-bottom:0!important;height:60px!important;background:#df2359!important;color:#fff!important;cursor:pointer!important;transition:all .6s ease-in-out!important;box-shadow:none!important;text-shadow:none!important;opacity:.6}input[type=submit]:hover{opacity:1}.privacy-policy-page-link{position:absolute;bottom:0}#nav a{position:absolute;color:#eee80!important;bottom:4rem;left:50%;transform:translate(-50%,0)!important}.forgetmenot{margin-bottom:.8rem!important}#backtoblog{position:absolute;top:0}     
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_page' );
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
