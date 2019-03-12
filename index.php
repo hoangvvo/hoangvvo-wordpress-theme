@@ -19,7 +19,7 @@ get_header();
 		<main id="main" class="site-main">
 			<div class="home">
 				<section class="home-section home-header">
-					<img src="<?php echo get_theme_mod( 'image-home-header-bg' ); ?>" class="home-header-bg">
+					<img src="<?php echo get_theme_mod( 'image-home-header-bg' ); ?>" alt="Hoang Vo" class="home-header-bg">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-8 mx-auto mt-1 text-center home-header-content">		
