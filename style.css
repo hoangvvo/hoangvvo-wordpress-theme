@@ -14,9 +14,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 hoangvvo is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
-
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
 /* Site css */
 body {
 	scroll-behavior: smooth;
@@ -48,9 +45,8 @@ blockquote {
 }
 /* Fade in while in view css */
 .animateView {
-	opacity: 0;
-	transform: translate(0, 20px); 
-	transition: all ease 2s;
+	transition: all 0.7s ease-out;
+	transform: translate(0, 10px); 
   }
   
 .animateView.visible {
@@ -96,15 +92,34 @@ transform: translate(0, 0);
 	position: relative;
 }
 .home .home-section.content-height {
-	height: unset;
+	min-height: unset;
 }
+.home .home-section .home-section-title {
+	font-size: 3rem;
+    font-weight: bold;
+	text-align: center;
+	margin: 2rem;
+}
+.home .home-section .home-section-button {
+	background: #171819;
+	color: #eee;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-top: 2rem;
+	transition: all linear .1s;
+	opacity: .9;
+}
+.home .home-section .home-section-button:hover {
+	opacity: 1;
+}
+	/* Home header */
 .home .home-header {
-	background: radial-gradient(#333333,#171819);
+	background: #171819;
 	color: #eee;
 	padding-top: 5rem;
 }
 .home .home-header .home-header-bg {
-	filter: grayscale(50%) brightness(80%);
+	filter: grayscale(100%) brightness(25%);
 	object-fit: cover;
 	object-position: 50% 50%;
 	width: 100vw;
@@ -128,26 +143,24 @@ transform: translate(0, 0);
 .home .home-header .home-header-content {
 	align-items: center;
 }
-.home .home-header .home-header-content .btn {
-	height: 48px;
-    padding: 0px 40px;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 82px;
-    line-height: 48px;
-	border: 1px solid #fff;
-	background-color: transparent;
-	outline: none;
-	transition: 0.4s;
-	margin: 1rem;
+	/* Home glance */
+.home .home-glance {
+	text-align: center;
 }
-.home .home-header .home-header-content .btn:hover {
-	color: #171819;
-	background-color: #fff;
+.home .home-glance .home-glance-number span {
+	display: block;
+	font-size: 1,5rem;
+	text-align: center;
+}
+.home .home-glance .home-glance-number b {
+	display: block;
+	font-size: 7rem;
+	font-weight: bold;
+	text-align: center;
 }
 /* Content page */
 .type-page {
-	background: radial-gradient(#333333,#171819);
+	background: #171819;
 	color: #d4d4dc;
 }
 .type-page .entry-header {
@@ -164,7 +177,6 @@ transform: translate(0, 0);
 	font-weight: bold;
 }
 .type-page .entry-header .entry-head .entry-title {
-	color: #feda6a;
 	display: inline-block;
 	font-size: 4rem;
     letter-spacing: 1rem;
@@ -414,16 +426,9 @@ transform: translate(0, 0);
 .wpcf7-form label, .wpcf7-form input, .wpcf7-form textarea {
 	width: 100%;
 }
-/* Social button */
-.social-btn .fab {
-	text-decoration: none;
-}
-.social-btn .fa-linkedin-in {
-	/*background-color: #0077B5;*/
-	color: #fff;
-}
-.social-btn .fa-instagram {
-	/*background-color: #c32aa3;
-	background: radial-gradient(circle at 30% 107%,#ffdc7d 0%, #f46f30 45%,#c32aa3 60%,#4c5fd7 90%);*/
-	color: #fff;
+/* Social nav */
+.nav-social-link svg {
+	fill: white;
+	width: 16px;
+	opacity: .8;
 }
