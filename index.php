@@ -22,9 +22,27 @@ get_header();
 					<img src="<?php echo get_theme_mod( 'image-home-header-bg' ); ?>" alt="Hoang Vo" class="home-header-bg">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-8 mx-auto mt-1 text-center home-header-content">		
-								<h2 class="">Meet Hoang Vo,</h2>
-								<h1 class="">He is a <span>software developer</span>, a <span>leader</span>, a <span>social marketer</span>, an <span>enthusiastic photographer</span>, and a <span>good friend</span>.</h1>
+							<div class="col-sm-8 mt-1 home-header-content">
+								<h1>I am a <span>curious learner</span>, a <span>practical thinker</span>, a <span>tech-savvy person</span>, and a <span>good friend</span>.</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="home-section home-glance content-height">
+					<div class="container">
+						<h3 class="home-section-title">At a glance</h3>
+						<div class="row home-glance-number">
+							<div class="col">		
+								<b>20+</b><span>Honors & Awards</span>
+							</div>
+							<div class="col">		
+								<b>100+</b><span>Volunteer hours</span>
+							</div>
+							<div class="col">		
+								<b>5+</b><span>Projects</span>
+							</div>
+							<div class="col">		
+								<b>15+</b><span>Skills</span>
 							</div>
 						</div>
 					</div>
