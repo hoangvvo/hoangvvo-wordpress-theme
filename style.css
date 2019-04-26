@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: #ffc107;
+  color: #feda6a;
 }
 
 h1,
@@ -51,9 +51,9 @@ h6 {
 
 textarea,
 input {
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.1);
   resize: none;
-  color: #444;
+  color: #feda6a;
   padding: .5rem;
   font-size: 1rem;
   transition: all .2s ease-in-out;
@@ -123,10 +123,10 @@ blockquote {
   width: 100%;
 }
 
-.form-submit #submit {
+.comment-form-comment .form-submit #submit {
   width: 100%;
-  color: #eee;
-  background-color: #007fac;
+  color: #212529;
+  background-color: #feda6a;
   padding: 10px 16px;
   border-radius: 4px;
   border: 3px solid transparent;
@@ -145,7 +145,7 @@ blockquote {
 }
 
 .search-form .search-submit {
-  background: #0099ff;
+  background: #feda6a;
   color: white;
   padding: 10px 20px;
   border-radius: 0 5px 5px 0;
@@ -175,15 +175,14 @@ blockquote {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  margin: 2rem;
 }
 
 .home .home-section .home-section-button {
-  font-weight: bold;
   font-size: 2rem;
   margin-top: 2rem;
   transition: all linear .1s;
   opacity: .9;
+  background-color: #feda6a;
 }
 
 .home .home-section .home-section-button:hover {
@@ -198,20 +197,14 @@ blockquote {
   filter: grayscale(100%) brightness(25%);
   object-fit: cover;
   object-position: 50% 50%;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
 }
 
-.home .home-header .home-header-content h2 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
 .home .home-header .home-header-content h1 {
-  margin: 1rem;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.3em;
 }
@@ -295,8 +288,6 @@ blockquote {
 /* #Post type# */
 .type-post .entry-header {
   position: relative;
-  background: #171819;
-  color: #eee;
   min-height: 100vh;
 }
 
@@ -343,11 +334,12 @@ blockquote {
   line-height: 2;
 }
 
-.type-post .entry-content h3:first-child {
-  line-height: 1.5;
+.type-post .entry-content p:first-child {
+  line-height: 2;
   border-left: solid 3px;
   padding-left: 1rem;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .type-post .entry-content a:not([class]):hover,
