@@ -17,7 +17,7 @@
 		<div class="site-info container">
 			<div class="row d-none">
 				<div class="col-4">
-					<h2>Hoang V Vo</h2>
+					<h2><?php bloginfo( 'name' ); ?></h2>
 					<div class="footer-social-link">
 						<a href="<?php echo get_theme_mod( 'linkedin-link' ); ?>" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
 						<a href="<?php echo get_theme_mod( 'instagram-link' ); ?>" class="nav-link"><i class="fab fa-instagram"></i></a>
