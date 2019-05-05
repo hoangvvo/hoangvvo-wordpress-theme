@@ -19,11 +19,11 @@ get_header();
 		<main id="main" class="site-main">
 			<div class="home">
 				<section class="home-section home-header">
-					<img src="<?php echo get_theme_mod( 'image-home-header-bg' ); ?>" alt="Hoang Vo" class="home-header-bg">
+					<img src="<?php echo get_theme_mod( 'image-home-header-bg' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="home-header-bg">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-8 mt-1 home-header-content">
-								<h1>I am a <span>curious learner</span>, a <span>practical thinker</span>, a <span>tech-savvy person</span>, and a <span>good friend</span>.</h1>
+								<h1><?php bloginfo('description'); ?></h1>
 							</div>
 						</div>
 					</div>
