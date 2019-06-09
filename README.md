@@ -40,7 +40,5 @@ Any contribution would be greatly appreciated.
 
 This project is licensed under the terms of the MIT license.
 
-You can distribute, modify this Wordpress theme for private or commercial as long as you credit me, Hoang Vo, as the original author.
-
 For more information see [LICENSE](https://github.com/vvhoang/hoangvvo-wordpress-theme/blob/master/LICENSE).
 
